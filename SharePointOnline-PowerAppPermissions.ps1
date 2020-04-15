@@ -1,5 +1,5 @@
-﻿<##### Script Settings #####>
-$currSiteCollectionUrl = "https://themichel.sharepoint.com/sites/powerappsdemo072" #"https://contoso.sharepoint.com/sites/yoursite" 
+<##### Script Settings #####>
+$currSiteCollectionUrl = "https://contoso.sharepoint.com/sites/yoursite" 
 #Array with the names for the lists you want to apply the permissions, add more list names if needed 
 $listNames = @("Test List", "Second Test List")
 #Group names: Change to existing group names if you want to update existing group permissions instead of creating new groups
@@ -7,13 +7,13 @@ $listNames = @("Test List", "Second Test List")
 $readersName = "Power Apps Readers"
 $membersName = "Power Apps Contributors"
 ##keeps current permissions for other groups in the list
-$keepOtherGroupsPemissions = $true 
-$readersName = "Site Visitors" # "Power Apps Readers"
-$membersName = "Site Members"# "Power Apps Contributors"
-<##### Script Settings #####>
+$keepOtherGroupsPemissions = $false 
+$readersName = "Power Apps Readers"
+$membersName = "Power Apps Contributors"
+<##### Script Settings #####> 
 
 #Connect to your site
-Connect-PnPOnline -Url $currSiteCollectionUrl -Credentials "TheMichel" # -UseWebLogin
+Connect-PnPOnline -Url $currSiteCollectionUrl -UseWebLogin
 
 #Permission level names
 $paContribute = "Contribute from Power Apps"
