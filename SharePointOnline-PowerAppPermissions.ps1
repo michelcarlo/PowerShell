@@ -10,7 +10,7 @@ $membersName = "Power Apps Contributors"
 $keepOtherGroupsPemissions = $false 
 $readersName = "Power Apps Readers"
 $membersName = "Power Apps Contributors"
-<##### Script Settings #####>
+<##### Script Settings #####> 
 
 #Connect to your site
 Connect-PnPOnline -Url $currSiteCollectionUrl -UseWebLogin
